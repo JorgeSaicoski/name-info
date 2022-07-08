@@ -59,7 +59,7 @@ const Initial = () => {
             <div className="bg-blue-600 flex flex-col text-center flex-wrap p-44 justify-around w-full">
               <p>Probably {name} has {age} years-old.</p>
               <p>And your gender is {gender}.</p>
-              <p>And you nationality is {nationality}. <a target="_blank" rel="noreferrer" href="https://www.iban.com/country-codes">Check the ID country here</a></p>
+              <p>And your nationality is {nationality}. <a target="_blank" rel="noreferrer" href="https://www.iban.com/country-codes">Check the ID country here</a></p>
                 {
                   local ?
                     <p>By the way, are you visiting {local}?</p>
