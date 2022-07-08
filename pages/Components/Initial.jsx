@@ -70,7 +70,7 @@ const Initial = () => {
           :
             <div>
               <form className="bg-blue-600 flex flex-row flex-wrap p-44 justify-center" onSubmit={handleSubmit}>
-                <label className="w-1/3 text-right bg-green-100 p-2" for="name">Choice a name:</label>
+                <label className="w-1/3 text-right bg-green-100 p-2">Choice a name:</label>
                 <input type="text" name="name" className="w-1/2 p-2 bg-green-100" value={name} onChange={handleChange} />
                 <input type="submit" className="w-1/3 p-3.5 border-4 bg-green-100 rounded-3xl m-auto mt-11"/>
               </form>
