@@ -29,23 +29,26 @@ const Initial = () => {
         setTimeout(setAge(repos.data.age),100)
       });
     };
+
     useEffect(()=>{
       axios.get("https://catfact.ninja/fact").then((repos) => {
         setFact(repos.data.fact)
-
       });
-      axios.get("https://api.ipify.org?format=json").then((repos) => {
-        setIp(repos.data.ip)
-
-      }).then(
-        axios.get(`https://ipinfo.io/${ip}/geo`).then((repos) => {
-          setLocal(repos.data.city)
-
-        })
-      );
+      localAndIp()
     },[])
     const restart = () =>{
       setAge(0)
+    }
+
+
+    let localAndIp = async () =>{
+      console.log("oi")
+      await axios.get("https://api.ipify.org?format=json").then((repos) => {
+        setIp(repos.data.ip)
+      })
+      axios.get(`https://ipinfo.io/${ip}/geo`).then((repos) => {
+        setLocal(repos.data.city)
+      })
     }
 
     return (
