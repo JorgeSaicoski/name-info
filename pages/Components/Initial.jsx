@@ -52,11 +52,11 @@ const Initial = () => {
     }
 
     return (
-      <section className="flex flex-col w-screen">
+      <section className="flex flex-col w-screen h-screen">
 
         {
           age > 0 ?
-            <div className="bg-blue-600 flex flex-col text-center flex-wrap p-44 justify-around">
+            <div className="bg-blue-600 flex flex-col text-center flex-wrap p-44 justify-around w-full">
               <p>Probably {name} has {age} years-old.</p>
               <p>And your gender is {gender}.</p>
               <p>And you nationality is {nationality}. <a target="_blank" rel="noreferrer" href="https://www.iban.com/country-codes">Check the ID country here</a></p>
@@ -67,20 +67,20 @@ const Initial = () => {
                     <p>Your browser have a good security</p>
                 }
 
-                <button onClick={restart} className="w-1/3 p-3.5 border-4 bg-green-100 rounded-3xl m-auto mt-11">Restart</button>
+                <button onClick={restart} className="w-full p-3.5 border-4 bg-green-100 rounded-3xl mt-11">Restart</button>
 
             </div>
           :
-            <div className="w-full h-full">
-              <form className="bg-blue-600 flex flex-col flex-wrap p-44 justify-center text-center w-full h-full" htmlFor="name" onSubmit={handleSubmit}>
+            <div className="w-screen h-full p-6 bg-blue-600">
+              <form className=" flex flex-col justify-center text-center  w-full h-full" htmlFor="name" onSubmit={handleSubmit}>
                 <label className="bg-green-100 p-2">Choice a name:</label>
                 <input type="text" name="name" className="p-2 bg-green-100" value={name} onChange={handleChange} />
-                <input type="submit" className="w-1/3 p-3.5 border-4 bg-green-100 rounded-3xl m-auto mt-11"/>
+                <input type="submit" className="w-full p-3.5 border-4 bg-green-100 rounded-3xl mt-11"/>
               </form>
-              {fact}
             </div>
 
         }
+        <p className="flex-grow">{fact}</p>
 
       </section>
     )
