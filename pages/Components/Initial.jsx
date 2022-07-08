@@ -56,7 +56,7 @@ const Initial = () => {
             <div className="bg-blue-600 flex flex-col text-center flex-wrap p-44 justify-around">
               <p>Probably {name} has {age} years-old.</p>
               <p>And your gender is {gender}.</p>
-              <p>And you nationality is {nationality}. <a target="_blank" href="https://www.iban.com/country-codes">Check the ID country here</a></p>
+              <p>And you nationality is {nationality}. <a target="_blank" rel="noreferrer" href="https://www.iban.com/country-codes">Check the ID country here</a></p>
                 {
                   local ?
                     <p>By the way, are you visiting {local}?</p>
@@ -69,7 +69,7 @@ const Initial = () => {
             </div>
           :
             <div>
-              <form for="name" className="bg-blue-600 flex flex-row flex-wrap p-44 justify-center" onSubmit={handleSubmit}>
+              <form className="bg-blue-600 flex flex-row flex-wrap p-44 justify-center" onSubmit={handleSubmit}>
                 <label className="w-1/3 text-right bg-green-100 p-2" for="name">Choice a name:</label>
                 <input type="text" name="name" className="w-1/2 p-2 bg-green-100" value={name} onChange={handleChange} />
                 <input type="submit" className="w-1/3 p-3.5 border-4 bg-green-100 rounded-3xl m-auto mt-11"/>
