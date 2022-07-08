@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="text-3xl font-bold underline bg-yellow-700">
+      <div className="text-3xl font-bold underline bg-yellow-700">
         <Initial/>
-      </body>
+      </div>
     </div>
   )
 }
