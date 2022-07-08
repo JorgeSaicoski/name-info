@@ -51,7 +51,7 @@ const Initial = () => {
     }
 
     return (
-      <section className="flex flex-col justify-around h-screen">
+      <section className="flex flex-col w-screen">
 
         {
           age > 0 ?
