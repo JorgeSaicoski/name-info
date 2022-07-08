@@ -37,11 +37,13 @@ const Initial = () => {
       axios.get("https://api.ipify.org?format=json").then((repos) => {
         setIp(repos.data.ip)
 
-      });
-      axios.get(`https://ipinfo.io/${ip}/geo`).then((repos) => {
-        setLocal(repos.data.city)
+      }).then(
+        axios.get(`https://ipinfo.io/${ip}/geo`).then((repos) => {
+          setLocal(repos.data.city)
 
-      });
+        })
+      );
+
 
     },[])
     const restart = () =>{
