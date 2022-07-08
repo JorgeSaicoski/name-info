@@ -43,8 +43,6 @@ const Initial = () => {
 
         })
       );
-
-
     },[])
     const restart = () =>{
       setAge(0)
@@ -71,7 +69,7 @@ const Initial = () => {
             </div>
           :
             <div>
-              <form className="bg-blue-600 flex flex-col flex-wrap p-44 justify-center text-center" onSubmit={handleSubmit}>
+              <form className="bg-blue-600 flex flex-col flex-wrap p-44 justify-center text-center" htmlFor="name" onSubmit={handleSubmit}>
                 <label className="bg-green-100 p-2">Choice a name:</label>
                 <input type="text" name="name" className="p-2 bg-green-100" value={name} onChange={handleChange} />
                 <input type="submit" className="w-1/3 p-3.5 border-4 bg-green-100 rounded-3xl m-auto mt-11"/>
